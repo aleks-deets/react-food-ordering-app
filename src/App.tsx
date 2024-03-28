@@ -1,5 +1,4 @@
 import { MouseEvent, useState } from "react";
-import "./App.css";
 import Button from "./components/Button/Button";
 
 function App() {
@@ -7,6 +6,7 @@ function App() {
 
   const addCounter = (e: MouseEvent) => {
     console.log(e);
+    setCounter(counter + 1);
   };
 
   return (

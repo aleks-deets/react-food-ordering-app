@@ -9,7 +9,10 @@ export const ButtonAlt: FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <button {...props} className={cn(styles["button accent"], className)}>
+    <button
+      {...props}
+      className={cn(styles["button"], styles["accent"], className)}
+    >
       {children}
     </button>
   );
@@ -17,7 +20,10 @@ export const ButtonAlt: FC<ButtonProps> = ({
 
 function Button({ children, className, ...props }: ButtonProps) {
   return (
-    <button {...props} className={cn(styles["button accent"], className)}>
+    <button
+      {...props}
+      className={cn(styles["button"], styles["accent"], className)}
+    >
       {children}
     </button>
   );
