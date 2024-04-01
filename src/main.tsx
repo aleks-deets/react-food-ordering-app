@@ -5,7 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import { Menu } from "./pages/Menu/Menu";
 import { Cart } from "./pages/Cart/Cart";
-import { Error } from "./pages/Error/Error";
+import { Error as ErrorPage } from "./pages/Error/Error"; // Чтобы не было конфликтов
 import { Layout } from "./layout/Layout/Layout.tsx";
 import { Product } from "./pages/Product/Product.tsx";
 import axios from "axios";
@@ -27,7 +27,9 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <Product />,
+        errorElement: <>Error</>,
         loader: async ({ params }) => {
+          //throw new Error("some error");
           /* ИМИТАЦИЯ ЗАДЕРЖКИ НА 2 СЕК */
           await new Promise<void>((resolve) => {
             setTimeout(() => {
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <Error />,
+    element: <ErrorPage />,
   },
 ]);
 
