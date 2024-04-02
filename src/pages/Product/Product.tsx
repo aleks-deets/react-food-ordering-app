@@ -1,9 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { Product } from "../../interfaces/product.interface";
+import { IProduct } from "../../interfaces/product.interface";
 
 export function Product() {
   const { id } = useParams();
-  const data = useLoaderData() as Product;
+  const data = useLoaderData() as IProduct;
 
   //throw new Error("some error"); /* Эта ошибка обрабатывается в файле main.tsx - router - errorElement */
 
