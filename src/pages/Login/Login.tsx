@@ -43,7 +43,7 @@ export function Login() {
       });
       //console.log(data);
       //localStorage.setItem('jwt', JSON.stringify(data));
-      localStorage.setItem("jwt", data.access_token); // можно и без stringify() т.к. access_token уже и так строка
+      //localStorage.setItem("jwt", data.access_token); // можно и без stringify() т.к. access_token уже и так строка
       dispatch(userActions.addJwt(data.access_token));
       navigate("/");
     } catch (e) {
