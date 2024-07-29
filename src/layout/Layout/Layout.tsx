@@ -64,7 +64,8 @@ export function Layout() {
         </div>
         <Button className={styles["exit"]} onClick={logout}>
           <img src="/exit-icon.svg" alt="Exit icon" />
-          Выход
+          {/* Log out */}
+          Sign out
         </Button>
       </div>
       <div className={styles["content"]}>

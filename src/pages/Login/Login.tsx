@@ -63,7 +63,8 @@ export function Login() {
 
   return (
     <div className={styles["login"]}>
-      <Headling>Sign in</Headling>
+      {/* <Headling>Sign in</Headling> */}
+      <Headling>Log in to your account</Headling>
       {loginErrorMessage && (
         <div className={styles["error"]}>{loginErrorMessage}</div>
       )}
@@ -81,11 +82,14 @@ export function Login() {
             placeholder="Password"
           />
         </div>
+        {/* <Button appearance="big">Log in</Button> */}
         <Button appearance="big">Sign in</Button>
       </form>
       <div className={styles["links"]}>
         {/* <div>Don't have an account?</div>
         <Link to="/auth/register">Sign up</Link> */}
+        {/* <div>New to our platform?</div>
+        <Link to="/auth/register">Create an account.</Link> */}
         <div>New to our platform?</div>
         <Link to="/auth/register">Sign up now.</Link>
       </div>
